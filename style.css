@@ -1,0 +1,34 @@
+body {
+
+    background-color:lightgray;
+    text-align: center;
+}
+
+
+#playarea {
+    margin: 48px auto;
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    gap: 14px;
+
+}
+
+
+.card {
+    height: 100px;
+    border: 5px dotted rgb(178, 3, 3);
+}
+
+#play {
+
+padding: 20px;
+background-color:indigo;
+color: aliceblue;
+font-size: larger;
+font-weight: 600;
+text-align: center;
+margin-top: 20px;
+border-radius: 20px;
+
+}
