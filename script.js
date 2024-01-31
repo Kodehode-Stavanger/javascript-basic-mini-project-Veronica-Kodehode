@@ -23,6 +23,7 @@ const duplicated = [...cards, ...cards];
 // function to run when button clicked
 
 function playCards() {
+
   // while loop to clear cards before generating new cards
 
   while (playarea.firstChild) {
@@ -41,6 +42,7 @@ function playCards() {
   // loop to generate cards, styled
 
   for (let i = 0; i < duplicated.length; i++) {
+
     let cardContainer = document.createElement("div");
     cardContainer.className = "card-container";
     playarea.appendChild(cardContainer);
@@ -48,12 +50,71 @@ function playCards() {
     let card = document.createElement("div");
     card.className = "card";
     card.style.backgroundColor = duplicated[i];
+
+// event listener, card clicked
+
+    card.addEventListener("click", clickCards)
     cardContainer.appendChild(card);
 
-    let back = document.createElement("div");
-    back.className = "back";
-    cardContainer.appendChild(back);
+  } 
+} 
+
+// click card, flip card
+function clickCards() {
+  let card = this;
+  card.classList.toggle('flipped');
   }
+
+// match cards
+
+function matchCards(){
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function clickCards() {
+// let card = this;
+// card.className.toggle('flipped')
+
+//   // Check if two cards are flipped
+
+//   let flippedCards = document.querySelectorAll('.flipped');
+//   if (flippedCards.length === 2) {
+    
+//     // Add a delay before checking for a match
+//     setTimeout(checkMatch, 1000);
+
+
+
+// }
+
+
+
+// card.addEventListener("click"), () => {// }
 
 // conditionals
