@@ -1,34 +1,54 @@
 body {
-
-    background-color:lightgray;
-    text-align: center;
+  background-color: lightgray;
+  text-align: center;
 }
-
 
 #playarea {
-    margin: 48px auto;
-    width: max-content;
-    display: grid;
-    grid-template-columns: repeat(4, 150px);
-    gap: 14px;
-
+  position: relative;
+  margin: 48px auto;
+  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  gap: 14px;
 }
 
+.card-container {
+  position: relative;
+  height: 100px;
+}
 
 .card {
-    height: 100px;
-    border: 5px dotted rgb(178, 3, 3);
+  height: 100%;
+  height: 100%;
+  border: 1px solid black;
+  z-index: 0;
+  position: absolute;
+}
+
+.card:hover {
+  transform: rotate(180dg);
 }
 
 #play {
-
-padding: 20px;
-background-color:indigo;
-color: aliceblue;
-font-size: larger;
-font-weight: 600;
-text-align: center;
-margin-top: 20px;
-border-radius: 20px;
-
+  padding: 20px;
+  background-color: indigo;
+  color: aliceblue;
+  font-size: larger;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 20px;
 }
+
+/* flip card effect */
+
+.back {
+  height: 100%;
+  width: 100%;
+  border: 5px dotted rgb(192, 14, 8);
+  background-color: black;
+  z-index: 1;
+  position: absolute;
+}
+
+/* The addEventListener() method */
