@@ -1,0 +1,55 @@
+body {
+  background-image: url(/Images/two.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+#playarea {
+  position: relative;
+  margin: 48px auto;
+  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  gap: 14px;
+}
+
+.card-container {
+  position: relative;
+  height: 100px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+ transition: transform 0.5s;
+}
+
+.card::after {
+content: '';
+position: absolute;
+inset: 0;
+background-color: black;
+transition: 0.25s;
+transform: rotateY(0deg) ;
+backface-visibility: hidden;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+#play {
+  padding: 20px;
+  background-color: indigo;
+  color: aliceblue;
+  font-size: larger;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 20px;
+}
