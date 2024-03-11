@@ -1,5 +1,8 @@
 body {
-  background-color: lightgray;
+  background-image: url(/Images/two.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
 }
 
